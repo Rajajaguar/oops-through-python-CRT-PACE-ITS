@@ -1,0 +1,24 @@
+class swiss:
+      def __init__(self):
+            self.balance = 0
+            print("Welcome to Swiss Bank")
+      def deposit(self):
+            amount = float(input("Enter deposit amount:"))
+            self.balance += amount
+            print("\nAmount deposited:",amount)
+      def withdraw(self):
+            amount = float(input("Enter amount to be withdrawn:"))
+            if self.balance >= amount:
+                   self.balance -= amount
+                   print("\nyou withdrawn:",amount)
+            else:
+                  print("\nInsufficient balance")
+      def display(self):
+            print("\nYour Balance:",self.balance)
+
+
+#driver code
+s = swiss()
+s.deposit()
+s.withdraw()
+s.display()
